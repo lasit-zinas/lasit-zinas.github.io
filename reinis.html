@@ -18,14 +18,6 @@
 
 <style>
 
-  #wrapper {
-  width: 100%;
-  height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 button {
   background-color: #28a745; /* Green */
   border: none;
@@ -38,30 +30,55 @@ button {
   border-radius: 12px;
 }
 
-body { overflow: hidden; }
+body {
+  overflow: hidden;
+  height:100%;
+}
+
+html {
+  height:100%;
+}
+
 
 </style>
-
 </head>
+
+
+
 
 <body>
 
-<div id="wrapper">
-  <button type="button" class="button" onclick="document.location='facetime:reinis.babris@gmail.com'"><i class="fas fa-video"></i> Zvanīt Reinim</button>
+<div id="main-container" class="container-fluid h-100">
+  <div class="row h-100 align-items-center">
+    <div id="empty_column" class="col-sm-3"></div>
+    <div id="central_column" class="col-sm-6">
+      <div class="text-center">
+        <button type="button" class="button" onclick="document.location='facetime:reinis.babris@gmail.com'"><i class="fas fa-video"></i> Zvanīt Reinim</button>
+      </div>
+    </div>
+    <div id="empty_column" class="col-sm-3"></div>
+  </div>
 </div>
 
 
 
+
+
 <!--
+css
 
-Sho var ielikt CSSaa
- body {
-  margin: 0;
-  overscroll-behavior: none;
+
+#wrapper {
+width: 100%;
+height: 800px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
+
+div
+id="wrapper"
 -->
-
-
 
 </body>
 </html>
