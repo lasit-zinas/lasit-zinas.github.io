@@ -11,13 +11,19 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-82312485-10');
+  ga('send', 'pageview', {
+  'page': '/redirekta-lapa',
+  'hitCallback': function() {
+  window.location.replace = "https://www.lsm.lv/zinas/";
+}
+});
 </script>
   
   
   
   
 <link rel="apple-touch-icon" href="/zinas.png">
-<meta http-equiv="refresh" content="0; URL='https://www.lsm.lv/zinas/'" />
+<!-- <meta http-equiv="refresh" content="0; URL='https://www.lsm.lv/zinas/'" /> -->
 </head>
 
 <body>
