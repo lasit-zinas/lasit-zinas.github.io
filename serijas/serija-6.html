@@ -14,6 +14,12 @@
 </script>
 
 
+
+<script src="../js/froogaloop.js"></script>
+
+
+
+
 <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
 
@@ -82,19 +88,42 @@ html {
       <div class="text-center">
         <h1>5. sērija - Brīvības cīņas - laimīga nejaušība? (1919)</h1>
         <!-- vimeo embed quary params https://vimeo.zendesk.com/hc/en-us/articles/360001494447-Using-Player-Parameters -->
-          <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="video" src="https://player.vimeo.com/video/254449206?api=1&autoplay=1&byline=false&title=false" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="video" src="https://player.vimeo.com/video/254449206?api=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       </div>
       <br>
       <div class="text-center">
-        <button type="button" class="button btn-secondary btn-sm" ontouchstart="" onclick="document.location='../serijas/saraksts.html'"></i>Doties atpakaļ uz sēriju sarakstu</button>
+        <button type="button" class="button" id="play-button"></i>Atskaņot</button>
+        <button type="button" class="button" id="pause-button"></i>Nopauzēt</button>
+
+        <script>
+
+        // Custom play/pause pogas prieksh vimeo
+        // https://css-tricks.com/play-button-youtube-and-vimeo-api/
+        // https://codepen.io/chriscoyier/pen/aFrHh
+
+        var iframe = document.getElementById('video');
+
+        // $f == Froogaloop
+        var player = $f(iframe);
+
+        // bind events
+        var playButton = document.getElementById("play-button");
+        playButton.addEventListener("click", function() {
+          player.api("play");
+        });
+
+        var pauseButton = document.getElementById("pause-button");
+        pauseButton.addEventListener("click", function() {
+          player.api("pause");
+        });
+        </script>
+
+
       </div>
       <br>
       <br>
-      <br>
       <div class="text-center">
-        <button type="button" class="button btn btn-sm" id="play-button"></i>Atskaņot</button>
-        <br>
-        <button type="button" class="button btn btn-sm" id="pause-button"></i>Apturēt</button>
+        <button type="button" class="button btn-secondary" ontouchstart="" onclick="document.location='../serijas/saraksts.html'"></i>Doties atpakaļ uz sēriju sarakstu</button>
       </div>
     </div>
   </div>
