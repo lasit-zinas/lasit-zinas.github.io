@@ -15,8 +15,16 @@
 
 
 
-<script src="../js/froogaloop.js"></script>
+<script>
+fetch('https://player.cloudycdn.services/player/ltvlive/channel/zw7_ltv01-ltv1-l/', {
+  method: 'POST',
+  referrer: 'https://embed.cloudycdn.services/',
+}).then((response) => {
+  console.log(response);
+});
 
+
+</script>
 
 
 
@@ -100,17 +108,19 @@ html {
 
     <div id="central_column" class="col-sm-12">
       <div class="text-center">
-        <h1>LTV1 tiešraide</h1>
-        <h4>https://embed.cloudycdn.services/ltvlive/channel/zw7_ltv01-ltv1-l?player=regular&protocol=hls</h4>
+        <h1>LTV1</h1>
         <br>
-        <div class="video-container">
-          <iframe class="video" src="https://embed.cloudycdn.services/ltvlive/channel/zw7_ltv01-ltv1-l?player=regular&protocol=hls" frameborder="0" referrerpolicy="strict-origin"></iframe>
+        <div class="embed-responsive embed-responsive-16by9">
+          <video id="myVideo" autoplay>
+              <source src="https://ltvlive2167.cloudycdn.services/ltvlive/_definst_/ltvlive_ltv01_ltv1_l_zw7_43181_default_1321_hls.smil/chunklist_b2128000_t64NzIwcA==.m3u8" type="application/x-mpegURL">
+          </video>
         </div>
       </div>
-
-
       <br>
-
+      <br>
+      <div class="text-center">
+          <button onclick="playVid()" type="button" class="button btn-dark mr-4" id="play-button"></i>Atskaņot</button>
+          <button onclick="pauseVid()" type="button" class="button btn-dark" id="pause-button"></i>Apstādināt</button>
       <br>
       <br>
       <br>
@@ -121,6 +131,19 @@ html {
     </div>
   </div>
 </div>
+
+<script>
+var vid = document.getElementById("myVideo");
+
+function playVid() {
+  vid.play();
+}
+
+function pauseVid() {
+  vid.pause();
+}
+</script>
+
 
 <!--
 @media (hover:hover) {
