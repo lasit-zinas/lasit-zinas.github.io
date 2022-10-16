@@ -66,7 +66,7 @@ button:active {
 body {
   overflow: hidden;
   height:100%;
-<!-- background-color:#797979 -->
+ background-color:#797979
 }
 
 html {
@@ -100,79 +100,22 @@ html {
 
     <div id="central_column" class="col-sm-12">
       <div class="text-center">
-        <h1>Tiešraide no Sv. Marijas Magdalēnas baznīcas</h1>
-        <br>
-        <h4>Darba dienās un sestdienās: 07:30, 19:00</h4>
-        <h4>Svētdienās: 08:00, 10:00, 12:00, 17:30 (vesperes), 18:00</h4>
+        <h1>LTV1 tiešraide</h1>
         <br>
         <div class="video-container">
-          <iframe class="video" src="https://www.youtube.com/embed/live_stream?channel=UC2NXq0GBqb0OPDHpkZZl7vQ&enablejsapi=1&fs=0&playsinline=1&controls=0" frameborder="0" allowfullscreen id="video"></iframe>
+          <iframe class="video" src="https://embed.cloudycdn.services/ltvlive/channel/zw7_ltv01-ltv1-l?player=regular&protocol=hls" frameborder="0"></iframe>
         </div>
       </div>
+
+
       <br>
-      <div class="text-center">
-          <button type="button" class="button mr-4" id="play-button"></i>Atskaņot</button>
-          <button type="button" class="button" id="pause-button"></i>Nopauzēt</button>
 
-
-
-
-
-
-
-
-
-        <script>
-
-        var player;
-
-        function onYouTubePlayerAPIReady() {
-          // create the global player from the specific iframe (#video)
-          player = new YT.Player('video', {
-            events: {
-              // call this function when player is ready to use
-              'onReady': onPlayerReady
-            }
-          });
-        }
-
-
-        function onPlayerReady(event) {
-
-          // bind events
-          var playButton = document.getElementById("play-button");
-          playButton.addEventListener("click", function() {
-            player.playVideo();
-          });
-
-          var pauseButton = document.getElementById("pause-button");
-          pauseButton.addEventListener("click", function() {
-            player.pauseVideo();
-          });
-
-        }
-
-        // Inject YouTube API script
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/player_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-        // Custom play/pause pogas prieksh youtube
-        // https://css-tricks.com/play-button-youtube-and-vimeo-api/
-        // https://codepen.io/chriscoyier/pen/aFrHh
-
-        </script>
-
-
-      </div>
       <br>
       <br>
       <br>
       <br>
       <div class="text-center">
-        <button type="button" class="button btn-secondary" ontouchstart="" onclick="document.location='index.html'"></i>Doties atpakaļ uz ziņām</button>
+        <button type="button" class="button btn-light" ontouchstart="" onclick="document.location='index.html'"></i>Doties atpakaļ uz ziņām</button>
       </div>
     </div>
   </div>
