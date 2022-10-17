@@ -2,9 +2,6 @@
 <html>
 
 <head>
-<title>LTV 1</title>
-
-
   <!-- tests -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82312485-10"></script>
@@ -53,11 +50,11 @@ button {
   background-color: #007bff; /* Bootstrap blue */
   border: none;
   color: white;
-  padding: 7px 40px;
+  padding: 15px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 32px;
+  font-size: 45px;
   border-radius: 12px;
   transition: color 0.2s ease-in-out;
 }
@@ -72,24 +69,18 @@ button:active {
   color:rgba(255,255,255,0.2);
 }
 
-html {
-  height: -webkit-fill-available;
-}
 
 
 body {
   overflow: hidden;
-  min-height: 100vh;
-  background-color:#797979;
-  min-height: -webkit-fill-available;
+  height:100%;
+ background-color:#797979
 }
 
+html {
+  height:100%;
+}
 
-</style>
-
-
-
-<!--
 .video-container {
   position: relative;
   width: 100%;
@@ -104,8 +95,8 @@ body {
   height: 100%;
   border: 0;
 }
--->
 
+</style>
 </head>
 
 
@@ -117,6 +108,7 @@ body {
 
     <div id="central_column" class="col-sm-12">
       <div class="text-center">
+        <h1>LTV7</h1>
         <br>
         <div class="embed-responsive embed-responsive-16by9">
           <video id="myVideo" autoplay playsinline>
@@ -125,16 +117,20 @@ body {
         </div>
       </div>
       <br>
+      <br>
       <div class="text-center">
           <button onclick="playVid()" type="button" class="button btn-dark mr-4" id="play-button"></i>Atskaņot</button>
-          <button onclick="pauseVid()" type="button" class="button btn-dark mr-4" id="pause-button"></i>Apstādināt</button>
-          <button type="button" class="button btn-light" ontouchstart="" onclick="document.location='index.html'"></i>Atpakaļ uz ziņām</button>
+          <button onclick="pauseVid()" type="button" class="button btn-dark" id="pause-button"></i>Apstādināt</button>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="text-center">
+        <button type="button" class="button btn-light" ontouchstart="" onclick="document.location='index.html'"></i>Doties atpakaļ uz ziņām</button>
+      </div>
     </div>
   </div>
 </div>
-</div>
-
-
 
 <script>
 var vid = document.getElementById("myVideo");
@@ -149,6 +145,14 @@ function pauseVid() {
 </script>
 
 
+<!--
+@media (hover:hover) {
+   button:hover {
+      color:rgba(255,255,255,0.2);
+   }
+}
+
+-->
 
 </body>
 </html>
